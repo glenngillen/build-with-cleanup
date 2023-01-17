@@ -13,7 +13,7 @@ once your build command is finished.
 ```hcl
 module "build" {
   source  = "glenngillen/build-with-cleanup/module"
-  version = "1.0.1"
+  version = "1.0.2"
 
   working_dir = "app/path/here"
   build_command = <<EOF

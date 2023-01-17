@@ -11,7 +11,7 @@ resource "null_resource" "pre" {
 
 module "build" {
   source  = "glenngillen/multiline-command/gg"
-  version = "1.0.0"
+  version = "~> 1.0.2"
 
   depends_on = [
     null_resource.pre
@@ -24,7 +24,7 @@ module "build" {
 
 module "compress" {
   source  = "glenngillen/archive/gg"
-  version = "1.0.0"
+  version = "~> 1.0.0"
 
   depends_on = [
     module.build
@@ -38,7 +38,7 @@ module "compress" {
 
 module "cleanup" {
   source  = "glenngillen/multiline-command/gg"
-  version = "1.0.0"
+  version = "~> 1.0.2"
 
   triggers = local.triggers
 
